@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2 stuff</title>
+        <link rel="stylesheet" href="Task 2.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- All Header Stuff -->
+
+        <div id="header-shadow"></div>
+        <div id="header">
+            <div id="header-title">
+                <p id="header-title-txt">watch.it</p>
+            </div>
+            <div id="nav-links">
+                <div class="nav-link"><a href="#" class="nav-link-a">Action</a></div>
+                <div class="nav-link"><a href="#" class="nav-link-a">Comedy</a></div>
+                <div class="nav-link"><a href="#" class="nav-link-a">Romance</a></div>
+                <div class="nav-link"><a href="#" class="nav-link-a">Drama</a></div>
+            </div>
+            <div id="search">
+                <button id="search-btn">
+                    <span id="search-btn-txt">SEARCH</span>
+                </button>
+            </div>
+        </div>
+        <div id="header-spacer"></div>
+
+        <!-- Actual Content -->
+
+        <div id="page-content">
+
+            <!-- Desktop-Specific Elements -->
+
+            <div id="desktop-tickets">
+                <!-- Primary Ticket -->
+
+                <div class="desktop-main-ticket">
+                    <div class="desktop-main-ticket-imgcont">
+                        <img src="./assets/barbie.jpg" class="ticket-img">
+                    </div>
+                    <div class="desktop-main-ticket-details">
+                        <span class="desktop-main-ticket-description">
+                            Step into the dazzling world of Barbie as she embarks on an unexpected journey from her perfect doll life to the real world. Filled with humor, heart, and empowering messages, this vibrant adventure redefines what it means to dream big!
+                        </span>
+                        <button class="desktop-main-ticket-btn ticket-btn">WATCH<br/>NOW</button>
+                    </div>
+                </div>
+
+                <!-- Highlight Tickets -->
+                <!-- The highlight tickets reuse the exact same style as the Mobile tickets, so "desktop-" is not in the class names -->
+
+                <div id="desktop-highlight-tickets">
+
+                    <!-- Hidden Figures -->
+
+                    <div class="highlight-ticket">
+                        <div class="highlight-ticket-imgcont">
+                            <img src="./assets/hidden-figures.jpg" class="ticket-img">
+                        </div>
+                        <div class="highlight-ticket-details">
+                            <span class="highlight-ticket-description">
+                                Three unsung heroes of NASA's space race take the spotlight in this inspiring true story. Battling discrimination and defying the odds, these brilliant African-American women prove that intelligence, perseverance, and unity can change history and break barriers.
+                            </span>
+                            <button class="highlight-ticket-btn ticket-btn">WATCH NOW</button>    
+                        </div>
+                    </div>
+
+                    <!-- Hook -->
+
+                    <div class="highlight-ticket">
+                        <div class="highlight-ticket-imgcont">
+                            <img src="./assets/hook.jpg" class="ticket-img">
+                        </div>
+                        <div class="highlight-ticket-details">
+                            <span class="highlight-ticket-description">
+                                Rediscover Neverland in this thrilling twist on Peter Pan! Robin Williams stars as a grown-up Peter, who must rediscover his inner child to rescue his kids from the clutches of Captain Hook. Adventure, magic, and nostalgia blend in this timeless family classic.
+                            </span>
+                            <button class="highlight-ticket-btn ticket-btn">WATCH NOW</button>    
+                        </div>
+                    </div>    
+                </div>
+
+                <!-- Extra Tickets -->
+
+                <div id="desktop-extra-tickets">
+
+                    <!-- La La Land -->
+
+                    <div class="desktop-extra-ticket">
+                        <div class="desktop-extra-ticket-imgcont">
+                            <img src="./assets/la-la-land.jpg" class="ticket-img">
+                        </div>
+                        <div class="desktop-extra-ticket-details">
+                            <span class="desktop-extra-ticket-description">
+                                Love, dreams, and the magic of LA take center stage in this musical masterpiece. Watch as two starry-eyed artists navigate passion and ambition in a world where every moment feels like a cinematic spectacle!
+                            </span>
+                            <button class="desktop-extra-ticket-btn ticket-btn">WATCH NOW</button>
+                        </div>
+                    </div>
+
+                    <!-- Palm Springs -->
+
+                    <div class="desktop-extra-ticket">
+                        <div class="desktop-extra-ticket-imgcont">
+                            <img src="./assets/palm-springs.jpg" class="ticket-img">
+                        </div>
+                        <div class="desktop-extra-ticket-details">
+                            <span class="desktop-extra-ticket-description">
+                                A never-ending wedding day turns into an unforgettable time-loop romance! Stuck in the same day, two strangers find love, chaos, and meaning in the most unexpected ways.
+                            </span>
+                            <button class="desktop-extra-ticket-btn ticket-btn">WATCH NOW</button>
+                        </div>
+                    </div>
+
+                    <!-- Who Framed Roger Rabbit -->
+
+                    <div class="desktop-extra-ticket">
+                        <div class="desktop-extra-ticket-imgcont">
+                            <img src="./assets/who-framed-roger-rabbit.jpg" class="ticket-img">
+                        </div>
+                        <div class="desktop-extra-ticket-details">
+                            <span class="desktop-extra-ticket-description">
+                                In a world where cartoons and humans coexist, a detective must solve a zany, high-stakes mystery. Packed with wild humor, groundbreaking animation, and noir twists, this unique film will pull you into a world where anything is possible!
+                            </span>
+                            <button class="desktop-extra-ticket-btn ticket-btn">WATCH NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Elements -->
+
+            <div id="mobile-tickets">
+
+                <!-- Barbie -->
+
+                <div class="highlight-ticket">
+                    <div class="highlight-ticket-imgcont">
+                        <img src="./assets/barbie.jpg" class="ticket-img">
+                    </div>
+                    <div class="highlight-ticket-details">
+                        <span class="highlight-ticket-description">
+                            Step into the dazzling world of Barbie as she embarks on an unexpected journey from her perfect doll life to the real world. Filled with humor, heart, and empowering messages, this vibrant adventure redefines what it means to dream big!
+                        </span>
+                        <button class="highlight-ticket-btn ticket-btn">WATCH NOW</button>    
+                    </div>
+                </div>
+
+                <!-- Hidden Figures -->
+
+                <div class="highlight-ticket">
+                    <div class="highlight-ticket-imgcont">
+                        <img src="./assets/hidden-figures.jpg" class="ticket-img">
+                    </div>
+                    <div class="highlight-ticket-details">
+                        <span class="highlight-ticket-description">
+                            Three unsung heroes of NASA's space race take the spotlight in this inspiring true story. Battling discrimination and defying the odds, these brilliant African-American women prove that intelligence, perseverance, and unity can change history and break barriers.
+                        </span>
+                        <button class="highlight-ticket-btn ticket-btn">WATCH NOW</button>    
+                    </div>
+                </div>
+
+                <!-- Hook -->
+
+                <div class="highlight-ticket">
+                    <div class="highlight-ticket-imgcont">
+                        <img src="./assets/hook.jpg" class="ticket-img">
+                    </div>
+                    <div class="highlight-ticket-details">
+                        <span class="highlight-ticket-description">
+                            Rediscover Neverland in this thrilling twist on Peter Pan! Robin Williams stars as a grown-up Peter, who must rediscover his inner child to rescue his kids from the clutches of Captain Hook. Adventure, magic, and nostalgia blend in this timeless family classic.
+                        </span>
+                        <button class="highlight-ticket-btn ticket-btn">WATCH NOW</button>    
+                    </div>
+                </div>
+
+                <!-- La La Land -->
+
+                <div class="highlight-ticket">
+                    <div class="highlight-ticket-imgcont">
+                        <img src="./assets/la-la-land.jpg" class="ticket-img">
+                    </div>
+                    <div class="highlight-ticket-details">
+                        <span class="highlight-ticket-description">
+                            Love, dreams, and the magic of LA take center stage in this musical masterpiece. Watch as two starry-eyed artists navigate passion and ambition in a world where every moment feels like a cinematic spectacle!
+                        </span>
+                        <button class="highlight-ticket-btn ticket-btn">WATCH NOW</button>    
+                    </div>
+                </div>
+
+                <!-- Palm Springs -->
+
+                <div class="highlight-ticket">
+                    <div class="highlight-ticket-imgcont">
+                        <img src="./assets/palm-springs.jpg" class="ticket-img">
+                    </div>
+                    <div class="highlight-ticket-details">
+                        <span class="highlight-ticket-description">
+                            A never-ending wedding day turns into an unforgettable time-loop romance! Stuck in the same day, two strangers find love, chaos, and meaning in the most unexpected ways.
+                        </span>
+                        <button class="highlight-ticket-btn ticket-btn">WATCH NOW</button>    
+                    </div>
+                </div>
+
+                <!-- Who Framed Roger Rabbit -->
+
+                <div class="highlight-ticket">
+                    <div class="highlight-ticket-imgcont">
+                        <img src="./assets/who-framed-roger-rabbit.jpg" class="ticket-img">
+                    </div>
+                    <div class="highlight-ticket-details">
+                        <span class="highlight-ticket-description">
+                            In a world where cartoons and humans coexist, a detective must solve a zany, high-stakes mystery. Packed with wild humor, groundbreaking animation, and noir twists, this unique film will pull you into a world where anything is possible!
+                        </span>
+                        <button class="highlight-ticket-btn ticket-btn">WATCH NOW</button>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

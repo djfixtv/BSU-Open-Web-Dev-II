@@ -1,0 +1,40 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+h1 {
+    padding: 0 0 0 0.4vw;
+    font-size: 2.1vw;
+}
+
+.Container {
+    background: #eee;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 3.2vw;
+    grid-template-rows: 19vh 19vh;
+    grid-gap: 20px;
+    font-size: 1.1vw;
+    color: white;
+}
+.Item1 {
+    background:orange;
+    /* grid-row: 2/3; */
+    /* grid-column: 4/3; */
+}
+.Item2 {
+    background:blueviolet;
+}
+.Item3 {
+    background:green;
+}
+.Item4 {
+    background:magenta;
+    /* grid-row: 1/1; */
+}
+.Item5 {
+    background:orangered;
+}
+.Item6 {
+    background:gold;
+    /* grid-row: 3/2 ; */
+}

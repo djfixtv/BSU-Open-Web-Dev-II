@@ -1,0 +1,312 @@
+/*
+
+Main content should use large spacing.
+Movie content boxes should use small spacing.
+Header should use large spacing between nav options, small spacing elsewhere
+Buttons should use small spacing and border radius
+
+Main content container should have max width of 900px
+
+Typography should adhere to:
+- Heading and buttons use "Teko" font family. All others should use "Lato"
+  - Import these from Google Fonts
+- Header should use font size "2em" on mobile, and "3em" on desktop
+- Button font size should be "2em"
+- Movie container font size should be "1.5em"
+
+*/
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #d3d3d3;
+}
+
+* {
+  font-family: "Lato";
+}
+
+#header-shadow {
+  width: 100%;
+  height: 110px;
+  background: #696969;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#header-spacer {
+  width: 100%;
+  height: 110px;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #FFFFFF;
+  display: flex;
+  line-height: 100px;
+  border-bottom: 2px solid #000;
+  background: #FFFFFF;
+  box-shadow: 0 5px 5px 0 #696969;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#header #header-title {
+  aspect-ratio: 1;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+#header #header-title #header-title-txt {
+  margin: 0 0 0 16px;
+  padding: 0;
+  font-size: 2em;
+}
+#header #nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+#header #nav-links .nav-link {
+  place-items: center;
+  font-family: "Teko";
+}
+#header #nav-links .nav-link .nav-link-a {
+  color: #000;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+#header #search #search-btn {
+  width: 150px;
+  height: 80px;
+  background: #bbb;
+  text-align: center;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 2px solid #000;
+  margin: 10px 10px 0 0;
+}
+#header #search #search-btn #search-btn-txt {
+  font-family: "Teko";
+  font-size: 2em;
+}
+
+#page-content {
+  position: relative;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+  padding: 0 2em 10vh 2em;
+}
+
+.ticket-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ticket-btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: #d3d3d3;
+  font-size: 2em;
+  transition: 0.2s;
+  font-family: "Teko";
+}
+
+.highlight-ticket {
+  display: inline-block;
+  margin: 16px;
+  position: relative;
+  width: 350px;
+  background: #FFFFFF;
+  box-shadow: 10px 10px 0 0 #696969;
+  border: 2px solid #000;
+}
+.highlight-ticket .highlight-ticket-imgcont {
+  position: relative;
+  border-bottom: 2px solid #000;
+  width: 100%;
+  height: 400px;
+}
+.highlight-ticket .highlight-ticket-details .highlight-ticket-description {
+  display: block;
+  min-height: 150px;
+}
+.highlight-ticket .highlight-ticket-details .highlight-ticket-btn {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+
+#desktop-tickets .desktop-main-ticket {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 10px 10px 0 0 #696969;
+  border: 2px solid #000;
+  margin-bottom: 48px;
+}
+#desktop-tickets .desktop-main-ticket .desktop-main-ticket-imgcont {
+  border-bottom: 2px solid #000;
+  height: 300px;
+}
+#desktop-tickets .desktop-main-ticket .desktop-main-ticket-details {
+  display: flex;
+}
+#desktop-tickets .desktop-main-ticket .desktop-main-ticket-details .desktop-main-ticket-description {
+  flex-grow: 1;
+}
+#desktop-tickets .desktop-main-ticket .desktop-main-ticket-details .desktop-main-ticket-btn {
+  width: 400px;
+  border-radius: 16px;
+  margin-left: 16px;
+  padding: 16px;
+}
+#desktop-tickets #desktop-highlight-tickets {
+  display: flex;
+  justify-content: center;
+}
+#desktop-tickets #desktop-extra-tickets .desktop-extra-ticket {
+  height: 300px;
+  position: relative;
+  border: 2px solid #000;
+  box-shadow: 10px 10px 0 0 #696969;
+  display: flex;
+  background: #FFFFFF;
+  margin: 48px;
+}
+#desktop-tickets #desktop-extra-tickets .desktop-extra-ticket .desktop-extra-ticket-imgcont {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  border-right: 2px solid #000;
+}
+#desktop-tickets #desktop-extra-tickets .desktop-extra-ticket .desktop-extra-ticket-details {
+  width: 50%;
+  height: calc(100% - 32px);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+#desktop-tickets #desktop-extra-tickets .desktop-extra-ticket .desktop-extra-ticket-details .desktop-extra-ticket-description {
+  display: block;
+  flex-grow: 1;
+}
+#desktop-tickets #desktop-extra-tickets .desktop-extra-ticket .desktop-extra-ticket-details .desktop-extra-ticket-btn {
+  display: block;
+  border-radius: 16px;
+}
+#desktop-tickets .ticket-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 5px 0 #696969;
+}
+#desktop-tickets .ticket-btn:hover:active {
+  transform: scale(1.025);
+  box-shadow: 3px 3px 2px 0 #696969;
+}
+
+#mobile-tickets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .nav-link {
+    display: grid;
+    margin: 0 16px;
+  }
+  #search-btn {
+    border-radius: 16px;
+  }
+  #page-content {
+    margin-top: 48px;
+  }
+  #mobile-tickets {
+    display: none;
+  }
+  .desktop-main-ticket-details {
+    padding: 16px;
+  }
+  .highlight-ticket {
+    margin: 16px;
+  }
+  .highlight-ticket .highlight-ticket-details {
+    padding: 16px;
+  }
+  .highlight-ticket .highlight-ticket-details .highlight-ticket-description {
+    margin-bottom: 16px;
+  }
+  .highlight-ticket .highlight-ticket-details .highlight-ticket-btn {
+    border-radius: 16px;
+  }
+}
+@media (min-width: 720px) and (not (min-width: 1024px)) {
+  .nav-link {
+    display: grid;
+    margin: 0 16px;
+  }
+  #search-btn {
+    border-radius: 16px;
+  }
+  #page-content {
+    margin-top: 32px;
+  }
+  #desktop-tickets {
+    display: none;
+  }
+  .highlight-ticket {
+    margin: 16px;
+  }
+  .highlight-ticket .highlight-ticket-details {
+    padding: 16px;
+  }
+  .highlight-ticket .highlight-ticket-details .highlight-ticket-description {
+    margin-bottom: 16px;
+  }
+  .highlight-ticket .highlight-ticket-details .highlight-ticket-btn {
+    border-radius: 16px;
+  }
+}
+@media ((min-width: 360px) and (not (min-width: 720px))) or (max-width: 360px) {
+  .nav-link {
+    display: none;
+  }
+  #search-btn {
+    border-radius: 16px;
+  }
+  #page-content {
+    margin-top: 16px;
+  }
+  #desktop-tickets {
+    display: none;
+  }
+  .highlight-ticket {
+    margin: 16px;
+  }
+  .highlight-ticket .highlight-ticket-details {
+    padding: 16px;
+  }
+  .highlight-ticket .highlight-ticket-details .highlight-ticket-description {
+    margin-bottom: 16px;
+  }
+  .highlight-ticket .highlight-ticket-details .highlight-ticket-btn {
+    border-radius: 16px;
+  }
+}/*# sourceMappingURL=Task 2.css.map */

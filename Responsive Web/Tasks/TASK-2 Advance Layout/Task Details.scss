@@ -1,0 +1,40 @@
+// Colours (colour names were not specified)
+$darkBlue: #070410;
+$blue: #231651;
+$miku: #4DCCBD;
+$yellow: #EEF36A;
+$white: #FFFFFF;
+
+// Device Size Breakpoints
+$mobile: 360px;
+$tablet: 720px;
+$desktop: 1024px;
+
+// Margins, Padding, Gaps
+$mobile-spacing-small: 16px;
+$mobile-spacing-large: 16px;
+$tablet-spacing-small: 16px;
+$tablet-spacing-large: 32px;
+$desktop-spacing-small: 16px;
+$desktop-spacing-large: 48px;
+
+/*
+
+Main content should use large spacing.
+Movie content boxes should use small spacing.
+Header should use large spacing between nav options, small spacing elsewhere
+Buttons should use small spacing and border radius
+
+Main content container should have max width of 900px
+
+Typography should adhere to:
+- Heading and buttons use "Teko" font family. All others should use "Lato"
+  - Import these from Google Fonts
+- Header should use font size "2em" on mobile, and "3em" on desktop
+- Button font size should be "2em"
+- Movie container font size should be "1.5em"
+
+*/
+
+$background: #d3d3d3;
+$shadow: #696969;

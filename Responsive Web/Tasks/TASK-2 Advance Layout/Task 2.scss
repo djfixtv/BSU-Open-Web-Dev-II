@@ -1,0 +1,286 @@
+@import "./Task Details.scss";
+
+html, body { height: 100%; width: 100%; padding: 0; margin: 0; }
+body { background: $background; }
+
+* { font-family: "Lato" }
+
+// Header Stuff
+
+// Shadow is a separate element behind everything so that tickets can glide over it and still get cut off
+// partially by the header's actual box-shadow property, giving a stronger sense of depth in the page.
+#header-shadow { width: 100%; height: 110px; background: $shadow; position: fixed; top: 0; left: 0; }
+
+#header-spacer { width: 100%; height: 110px; }
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: $white;
+    display: flex;
+    line-height: 100px;
+    border-bottom: 2px solid #000;
+    background: $white;
+    box-shadow: 0 5px 5px 0 $shadow;
+    z-index: 2;
+    user-select: none;
+
+    #header-title {
+        aspect-ratio: 1;
+        height: 100%;
+        vertical-align: middle;
+        text-align: center;
+
+        #header-title-txt { margin: 0 0 0 16px; padding: 0; font-size: 2em; }
+    }
+
+    #nav-links {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+
+        .nav-link {
+            place-items: center;
+            font-family: "Teko";
+
+            .nav-link-a {
+                color: #000;
+                text-decoration: none;
+                width: 100%;
+                display: inline-block;
+            }
+        }
+    }
+
+    #search {
+        #search-btn {
+            width: 150px;
+            height: 80px;
+            background: #bbb;
+            text-align: center;
+            position: relative;
+            display: grid;
+            place-items: center;
+            border: 2px solid #000;
+            margin: 10px 10px 0 0;
+
+            #search-btn-txt {
+                font-family: "Teko";
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+#page-content {
+    position: relative;
+    max-width: 900px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 2em 10vh 2em;
+}
+
+// Main Content - All Platforms
+
+.ticket-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ticket-btn {
+    cursor: pointer;
+    user-select: none;
+    background: $background;
+    font-size: 2em;
+    transition: 0.2s;
+    font-family: "Teko";
+}
+
+// The "highlight tickets" on desktop are the same as every other ticket on the other platforms
+.highlight-ticket {
+    display: inline-block;
+    margin: $desktop-spacing-small;
+    position: relative;
+    width: 350px;
+    background: $white;
+    box-shadow: 10px 10px 0 0 $shadow;
+    border: 2px solid #000;
+
+    .highlight-ticket-imgcont {
+        position: relative;
+        border-bottom: 2px solid #000;
+        width: 100%;
+        height: 400px;
+    }
+
+    .highlight-ticket-details {
+
+        .highlight-ticket-description {
+            display: block;
+            min-height: 150px;
+        }
+
+        .highlight-ticket-btn {
+            width: 100%;
+            height: 100px;
+            text-align: center;
+        }    
+    }
+}
+
+// Main Content - Desktop
+
+#desktop-tickets {
+    .desktop-main-ticket {
+        position: relative;
+        width: 100%;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 10px 10px 0 0 $shadow;
+        border: 2px solid #000;
+
+        .desktop-main-ticket-imgcont {
+            border-bottom: 2px solid #000;
+            height: 300px;
+        }
+        
+        .desktop-main-ticket-details {
+            display: flex;
+    
+            .desktop-main-ticket-description {
+                flex-grow: 1;
+            }
+    
+            .desktop-main-ticket-btn {
+                width: 400px;
+                border-radius: $desktop-spacing-small;
+                margin-left: $desktop-spacing-small;
+                padding: $desktop-spacing-small;
+            }
+        }
+
+        margin-bottom: $desktop-spacing-large;
+    }
+    
+    #desktop-highlight-tickets {
+        display: flex;
+        justify-content: center;
+    }
+
+    #desktop-extra-tickets {
+        .desktop-extra-ticket {
+            height: 300px;
+            position: relative;
+            border: 2px solid #000;
+            box-shadow: 10px 10px 0 0 $shadow;
+            display: flex;
+            background: $white;
+            margin: $desktop-spacing-large;
+
+            .desktop-extra-ticket-imgcont {
+                width: 50%;
+                height: 100%;
+                position: relative;
+                border-right: 2px solid #000;
+            }
+
+            .desktop-extra-ticket-details {
+                width: 50%;
+                height: calc(100% - (2 * $desktop-spacing-small));
+                display: flex;
+                flex-direction: column;
+                padding: $desktop-spacing-small;
+
+                .desktop-extra-ticket-description {
+                    display: block;
+                    flex-grow: 1;
+                }
+
+                .desktop-extra-ticket-btn {
+                    display: block;
+                    border-radius: $desktop-spacing-small;
+                }
+            }
+        }
+    }
+
+    // --- Button scale animation on hover and click ---
+    // Not necessary for mobile and tablet where there is no mouse to hover with
+
+    .ticket-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 5px 0 $shadow;
+    }
+
+    .ticket-btn:hover:active {
+        transform: scale(1.025);
+        box-shadow: 3px 3px 2px 0 $shadow;
+    }
+}
+
+// Main Content - Mobile
+
+#mobile-tickets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+// --- Platform Specific Styling ---
+
+// Desktop Page
+@media (min-width: $desktop)
+{
+    .nav-link { display: grid; margin: 0 $desktop-spacing-small; }
+    #search-btn { border-radius: $desktop-spacing-small; }
+    #page-content { margin-top: $desktop-spacing-large; }
+    #mobile-tickets { display: none; }
+    .desktop-main-ticket-details { padding: $desktop-spacing-small; }
+
+    .highlight-ticket {
+        margin: $desktop-spacing-small;
+        .highlight-ticket-details {
+            padding: $desktop-spacing-small;
+            .highlight-ticket-description { margin-bottom: $desktop-spacing-small; }
+            .highlight-ticket-btn { border-radius: $desktop-spacing-small; }
+        }
+    }
+}
+
+// Tablet Page
+@media (min-width: $tablet) and (not (min-width: $desktop))
+{
+    .nav-link { display: grid; margin: 0 $tablet-spacing-small; }
+    #search-btn { border-radius: $tablet-spacing-small; }
+    #page-content { margin-top: $tablet-spacing-large; }
+    #desktop-tickets { display: none; }
+
+    .highlight-ticket {
+        margin: $tablet-spacing-small;
+        .highlight-ticket-details {
+            padding: $tablet-spacing-small;
+            .highlight-ticket-description { margin-bottom: $tablet-spacing-small; }
+            .highlight-ticket-btn { border-radius: $tablet-spacing-small; }
+        }
+    }
+}
+
+// Mobile Page
+@media ((min-width: $mobile) and (not (min-width: $tablet))) or (max-width: $mobile)
+{
+    .nav-link { display: none; }
+    #search-btn { border-radius: $mobile-spacing-small; }
+    #page-content { margin-top: $mobile-spacing-large; }
+    #desktop-tickets { display: none; }
+
+    .highlight-ticket {
+        margin: $mobile-spacing-small;
+        .highlight-ticket-details {
+            padding: $mobile-spacing-small;
+            .highlight-ticket-description { margin-bottom: $mobile-spacing-small; }
+            .highlight-ticket-btn { border-radius: $mobile-spacing-small; }
+        }
+    }
+}

@@ -1,0 +1,536 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Protest+Guerrilla:wght@400&display=swap');
+
+// Color Variables
+$background-color: #e9e9e9;
+$content-bg-color: #ffffff;
+$footer-bg-color: #14181d;
+
+// Breakpoints
+$small-mobile: 360px;
+$large-mobile: 540px;
+$tablet: 720px;
+$desktop: 1024px;
+
+// Standard Spacing
+$spacing-small: 12px;
+$spacing-large: 20px;
+$spacing-tablet: 30px;
+$spacing-desktop: 50px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d3d3d3;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #000;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // Typography
+    h1, h2 {
+        font-family: 'Protest Guerrilla', sans-serif;
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+    .sect1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    
+    }
+    .sect2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav, .nav a{
+        color: black;
+    }
+    p{
+        font-size: 1.25rem;
+    }
+    .p1{
+        padding: 0;
+    }
+    .page-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .author-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: $spacing-desktop 0; // Default desktop spacing
+        padding: $spacing-large;
+        background-color: $content-bg-color;
+    
+        .author-details {
+            flex: 2;
+    
+            h3 {
+                font-family: "Protest Guerrilla", sans-serif;
+                font-size: 3rem; // Large headings
+                margin-bottom: $spacing-small;
+            }
+    
+            p {
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 1rem;
+                color: #333;
+            }
+        }
+    
+        .author-profile {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .profile-picture {
+                width: 200px; // Desktop size
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid #ccc;
+            }
+        }
+    }
+    
+    footer {
+        text-align: center;
+        padding: $spacing-large;
+        font-size: 1rem;
+        color: #fff;
+        background-color: $footer-bg-color;
+        width: 100%;
+    }
+
+
+    // Desktop Page
+    @media (min-width: $desktop) {
+        padding: $spacing-desktop;
+
+        .page{
+            border: solid black 0.01rem;
+            background-color: $content-bg-color;
+            padding: $spacing-desktop;
+            width: 61.5%;
+            
+        }
+        h1, h2{
+            text-align: left;
+        }
+        .logo, .logo img {
+            width: 200px;
+        }
+        .logo {
+            padding-top: $spacing-desktop;
+        }
+    
+        .album-layout{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr; // Defines column widths
+            grid-template-rows: repeat(2, 1fr); // Defines two rows of equal height
+            gap: 10px; // Spacing between grid items
+            height: 600px; // Set the height of the container
+            width: 100%;
+            padding-top: $spacing-desktop;
+            
+            .featured-album{
+                position: relative;
+                overflow: hidden;
+                grid-column: 1 / 2; // Spans the first column
+                grid-row: 1 / 3; // Spans both rows
+                justify-content: center;
+                align-items: center;
+        
+            }
+            
+            .album-cover{
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .featured-album img{
+                position: absolute;
+                place-items: center;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                
+            }
+            
+            .album-cover img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sect2{
+            display: table-column;
+            column-count: 3; /* Number of sections (columns) */
+            column-gap: 13.2px; /* Spacing between columns */
+            width: 100%; /* Adjust as needed */
+            margin: 0 auto; /* Center the div on the page */
+            text-align: left; 
+        }
+        
+        .nav{
+            padding: $spacing-desktop;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 15vw;
+            font-size: 1rem;
+        }
+        .nav a{
+            font-size: 1rem;
+        }
+        .p1{
+            width: 62%;
+        }
+        h1{
+            font-size: 8rem;
+        }
+        h2{
+            font-size:  3.75rem;
+        }
+        .sect1 h2{
+            width: 100%;
+            
+        }  
+        
+        .author-section {
+            margin: $spacing-desktop 0;
+            padding: $spacing-desktop;
+    
+            .author-details {
+                h3 {
+                    font-size: 3rem; // Larger heading
+                }
+    
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+    
+            .author-profile {
+                .profile-picture {
+                    width: 200px; // Default size
+                    height: 200px;
+                }
+            }
+        }
+    
+        footer {
+            padding: $spacing-desktop;
+            font-size: 1.2rem;
+        }
+        
+    
+        
+    }
+
+    // Tablet Page
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        padding: $spacing-tablet;
+
+        .page{
+            border: solid black 0.01rem;
+            background-color: $content-bg-color;
+            padding: $spacing-tablet;
+            width: 80%;
+        }
+        h1, h2{
+            text-align: center;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        .sect1 h2{
+            width: 70%;
+            
+        }  
+        .logo, .logo img {
+            width: 80px;
+        }
+        .logo {
+            padding-top: $spacing-tablet;
+        }
+    
+        .album-layout{
+            display: grid;
+            grid-template-columns: 1fr 1fr; // Defines column widths
+            grid-template-rows: repeat(2, 1fr); // Defines two rows of equal height
+            gap: 10px; // Spacing between grid items
+            height: 550px; // Set the height of the container
+            width: 99%;
+            padding-top: $spacing-desktop;
+            
+            .featured-album{
+                display: none;
+        
+            }
+            
+            .album-cover{
+                position: relative;
+                overflow: hidden;
+                
+            }
+    
+            .featured-album img{
+                position: absolute;
+                place-items: center;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: none;
+                
+            }
+            
+            .album-cover img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .nav{
+            padding: $spacing-tablet;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 15vw;
+        }
+        .nav a{
+            font-size: 1rem;
+        }
+        .sect1 h2{
+            width: 100%;
+        }
+
+        .author-section {
+            padding: $spacing-tablet;
+    
+            .author-details {
+                h3 {
+                    font-size: 2.5rem;
+                }
+    
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+    
+            .author-profile {
+                .profile-picture {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    
+        footer {
+            padding: $spacing-tablet;
+            font-size: 1rem;
+        }
+    }
+
+    // Small and Large Mobile Page
+    @media (min-width: $small-mobile) and (max-width: $tablet) {
+        padding: $spacing-large;
+        .sect1 h2{
+            width: 100%;
+        }
+        .page {
+            border: solid black 0.01rem;
+            background-color: $content-bg-color;
+            padding: $spacing-large;
+            width: 100%;
+        }
+        h1, h2{
+            text-align: center;
+        }
+    
+        .logo, .logo img {
+            width: 80px;
+        }
+    
+        .logo {
+            padding-top: $spacing-large;
+        }
+    
+        .album-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px; // Consistent spacing for mobile
+            padding-top: $spacing-large;
+    
+            .album-cover {
+                position: relative;
+                overflow: hidden;
+    
+                img {
+                    width: 100%; // Ensure it spans the full container width
+                    height: auto; // Maintain aspect ratio
+                    object-fit: cover; // Crop while keeping the image proportional
+                }
+            }
+    
+            .featured-album {
+                display: none; // Hide on small and large mobile as per design
+            }
+        }
+        .nav{
+            padding: $spacing-large;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 15vw;
+        }
+        .nav a{
+            font-size: 1rem;
+        }
+        h1{
+            font-size:2.05rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        .sect1 h2{
+            width: 70%;
+            
+        } 
+        .author-section {
+            flex-direction: column-reverse; // Stack elements vertically
+            align-items: center; // Center-align items
+            padding: $spacing-large;
+    
+            .author-profile {
+                margin-bottom: $spacing-large; // Add spacing below the profile picture
+            }
+    
+            .author-details {
+                text-align: center; // Center the text content
+                h3 {
+                    font-size: 1.8rem; // Smaller heading
+                }
+    
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+    
+            .author-profile {
+                .profile-picture {
+                    width: 200px; // Smaller profile picture
+                    height: 200px;
+                }
+            }
+        }
+    
+        footer {
+            padding: $spacing-large;
+            font-size: 0.9rem;
+        }
+
+    }
+    @media (min-width: $small-mobile) and (max-width: $large-mobile) {
+        .logo{
+            padding: $spacing-small;
+        }
+        .page{
+            padding: $spacing-small;
+        }
+        h1, h2{
+            text-align: center;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        .sect1 h2{
+            width: 70%;
+            
+        } 
+        .nav{
+            padding: $spacing-small;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 8vw;
+        }
+        .nav a{
+            font-size: 1rem;
+        }
+        .sect1 h2{
+            width: 80%;
+        }
+        .sect1{
+            align-items: center;
+        }
+        .author-section {
+            flex-direction: column-reverse; // Stack elements vertically
+            align-items: center; // Center-align items
+            padding: $spacing-small;
+    
+            .author-profile {
+                margin-bottom: $spacing-small; // Add spacing below the profile picture
+            }
+    
+            .author-details {
+                text-align: center; // Center the text content
+                h3 {
+                    font-size: 1.8rem; // Smaller heading
+                }
+    
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+    
+            .author-profile {
+                .profile-picture {
+                    width: 200px; // Smaller profile picture
+                    height: 200px;
+                }
+            }
+        }
+    
+        footer {
+            padding: $spacing-small;
+            font-size: 0.875rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
