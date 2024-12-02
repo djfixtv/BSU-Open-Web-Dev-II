@@ -295,6 +295,9 @@ body footer {
   body {
     padding: 20px;
   }
+  body .sect1 {
+    align-items: center;
+  }
   body .sect1 h2 {
     width: 100%;
   }
